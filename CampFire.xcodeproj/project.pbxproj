@@ -1,0 +1,268 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		996BB33013A1C3D400057743 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996BB32F13A1C3D400057743 /* UIKit.framework */; };
+		996BB33213A1C3D400057743 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996BB33113A1C3D400057743 /* Foundation.framework */; };
+		996BB33413A1C3D400057743 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 996BB33313A1C3D400057743 /* CoreGraphics.framework */; };
+		996BB33A13A1C3D400057743 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 996BB33813A1C3D400057743 /* InfoPlist.strings */; };
+		996BB33D13A1C3D400057743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 996BB33C13A1C3D400057743 /* main.m */; };
+		996BB34013A1C3D400057743 /* CampFireAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */; };
+		996BB34313A1C3D400057743 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 996BB34113A1C3D400057743 /* MainWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		996BB32B13A1C3D400057743 /* CampFire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampFire.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		996BB32F13A1C3D400057743 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		996BB33113A1C3D400057743 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		996BB33313A1C3D400057743 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		996BB33713A1C3D400057743 /* CampFire-Info.plist */ = {isa = PBXFileReference; path = "CampFire-Info.plist"; sourceTree = "<group>"; };
+		996BB33913A1C3D400057743 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		996BB33B13A1C3D400057743 /* CampFire-Prefix.pch */ = {isa = PBXFileReference; path = "CampFire-Prefix.pch"; sourceTree = "<group>"; };
+		996BB33C13A1C3D400057743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */ = {isa = PBXFileReference; path = CampFireAppDelegate.h; sourceTree = "<group>"; };
+		996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampFireAppDelegate.m; sourceTree = "<group>"; };
+		996BB34213A1C3D400057743 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		996BB32813A1C3D400057743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996BB33013A1C3D400057743 /* UIKit.framework in Frameworks */,
+				996BB33213A1C3D400057743 /* Foundation.framework in Frameworks */,
+				996BB33413A1C3D400057743 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		996BB32013A1C3D300057743 = {
+			isa = PBXGroup;
+			children = (
+				996BB33513A1C3D400057743 /* CampFire */,
+				996BB32E13A1C3D400057743 /* Frameworks */,
+				996BB32C13A1C3D400057743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		996BB32C13A1C3D400057743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				996BB32B13A1C3D400057743 /* CampFire.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		996BB32E13A1C3D400057743 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				996BB32F13A1C3D400057743 /* UIKit.framework */,
+				996BB33113A1C3D400057743 /* Foundation.framework */,
+				996BB33313A1C3D400057743 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		996BB33513A1C3D400057743 /* CampFire */ = {
+			isa = PBXGroup;
+			children = (
+				996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */,
+				996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */,
+				996BB34113A1C3D400057743 /* MainWindow.xib */,
+				996BB33613A1C3D400057743 /* Supporting Files */,
+			);
+			path = CampFire;
+			sourceTree = "<group>";
+		};
+		996BB33613A1C3D400057743 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				996BB33713A1C3D400057743 /* CampFire-Info.plist */,
+				996BB33813A1C3D400057743 /* InfoPlist.strings */,
+				996BB33B13A1C3D400057743 /* CampFire-Prefix.pch */,
+				996BB33C13A1C3D400057743 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		996BB32A13A1C3D400057743 /* CampFire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 996BB34613A1C3D400057743 /* Build configuration list for PBXNativeTarget "CampFire" */;
+			buildPhases = (
+				996BB32713A1C3D400057743 /* Sources */,
+				996BB32813A1C3D400057743 /* Frameworks */,
+				996BB32913A1C3D400057743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampFire;
+			productName = CampFire;
+			productReference = 996BB32B13A1C3D400057743 /* CampFire.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		996BB32213A1C3D300057743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = n/a;
+			};
+			buildConfigurationList = 996BB32513A1C3D300057743 /* Build configuration list for PBXProject "CampFire" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 996BB32013A1C3D300057743;
+			productRefGroup = 996BB32C13A1C3D400057743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				996BB32A13A1C3D400057743 /* CampFire */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		996BB32913A1C3D400057743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996BB33A13A1C3D400057743 /* InfoPlist.strings in Resources */,
+				996BB34313A1C3D400057743 /* MainWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		996BB32713A1C3D400057743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				996BB33D13A1C3D400057743 /* main.m in Sources */,
+				996BB34013A1C3D400057743 /* CampFireAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		996BB33813A1C3D400057743 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				996BB33913A1C3D400057743 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		996BB34113A1C3D400057743 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				996BB34213A1C3D400057743 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		996BB34413A1C3D400057743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		996BB34513A1C3D400057743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		996BB34713A1C3D400057743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampFire/CampFire-Prefix.pch";
+				INFOPLIST_FILE = "CampFire/CampFire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		996BB34813A1C3D400057743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CampFire/CampFire-Prefix.pch";
+				INFOPLIST_FILE = "CampFire/CampFire-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		996BB32513A1C3D300057743 /* Build configuration list for PBXProject "CampFire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996BB34413A1C3D400057743 /* Debug */,
+				996BB34513A1C3D400057743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		996BB34613A1C3D400057743 /* Build configuration list for PBXNativeTarget "CampFire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				996BB34713A1C3D400057743 /* Debug */,
+				996BB34813A1C3D400057743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 996BB32213A1C3D300057743 /* Project object */;
+}
