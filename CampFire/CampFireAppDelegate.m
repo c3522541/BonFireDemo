@@ -7,6 +7,7 @@
 //
 
 #import "CampFireAppDelegate.h"
+#import "CampFireAppViewController.h"
 
 @implementation CampFireAppDelegate
 
@@ -15,8 +16,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    CampFireAppViewController *viewController = [[CampFireAppViewController alloc] init];
+    [self.window addSubview:viewController.view];
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
+    [viewController release];
     return YES;
 }
 
