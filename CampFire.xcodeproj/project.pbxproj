@@ -14,6 +14,7 @@
 		996BB33D13A1C3D400057743 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 996BB33C13A1C3D400057743 /* main.m */; };
 		996BB34013A1C3D400057743 /* CampFireAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */; };
 		996BB34313A1C3D400057743 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 996BB34113A1C3D400057743 /* MainWindow.xib */; };
+		996BB34B13A1C50200057743 /* CampFireAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 996BB34A13A1C50200057743 /* CampFireAppViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +22,15 @@
 		996BB32F13A1C3D400057743 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		996BB33113A1C3D400057743 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		996BB33313A1C3D400057743 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		996BB33713A1C3D400057743 /* CampFire-Info.plist */ = {isa = PBXFileReference; path = "CampFire-Info.plist"; sourceTree = "<group>"; };
+		996BB33713A1C3D400057743 /* CampFire-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CampFire-Info.plist"; sourceTree = "<group>"; };
 		996BB33913A1C3D400057743 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		996BB33B13A1C3D400057743 /* CampFire-Prefix.pch */ = {isa = PBXFileReference; path = "CampFire-Prefix.pch"; sourceTree = "<group>"; };
+		996BB33B13A1C3D400057743 /* CampFire-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CampFire-Prefix.pch"; sourceTree = "<group>"; };
 		996BB33C13A1C3D400057743 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */ = {isa = PBXFileReference; path = CampFireAppDelegate.h; sourceTree = "<group>"; };
+		996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CampFireAppDelegate.h; sourceTree = "<group>"; };
 		996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampFireAppDelegate.m; sourceTree = "<group>"; };
 		996BB34213A1C3D400057743 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		996BB34913A1C50200057743 /* CampFireAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CampFireAppViewController.h; sourceTree = "<group>"; };
+		996BB34A13A1C50200057743 /* CampFireAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CampFireAppViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 		996BB33513A1C3D400057743 /* CampFire */ = {
 			isa = PBXGroup;
 			children = (
+				996BB34913A1C50200057743 /* CampFireAppViewController.h */,
+				996BB34A13A1C50200057743 /* CampFireAppViewController.m */,
 				996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */,
 				996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */,
 				996BB34113A1C3D400057743 /* MainWindow.xib */,
@@ -157,6 +162,7 @@
 			files = (
 				996BB33D13A1C3D400057743 /* main.m in Sources */,
 				996BB34013A1C3D400057743 /* CampFireAppDelegate.m in Sources */,
+				996BB34B13A1C50200057743 /* CampFireAppViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
