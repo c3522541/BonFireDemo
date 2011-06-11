@@ -7,7 +7,7 @@
 //
 
 #import "CampFireAppViewController.h"
-
+#import "FlipsideView.h"
 
 @implementation CampFireAppViewController
 
@@ -49,9 +49,10 @@
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
-    UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     [view setBackgroundColor:[UIColor brownColor]];
     self.view = view;
+    [view release];    
     
     // create the view that will execute our animation
     UIImageView* campFireView = [[UIImageView alloc] initWithFrame:self.view.frame];
@@ -80,17 +81,21 @@
     campFireView.animationRepeatCount = 0;
     [campFireView startAnimating];
     
-    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     infoButton.frame = CGRectMake(290.0f, 420.0f, 30.0f, 30.0f);
+    [infoButton addTarget:self action:@selector(toggleView) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    [view addSubview:campFireView];
-    [view insertSubview:infoButton aboveSubview:campFireView];
-    
-//    [infoButton release];
-    [view release];
-    
-    
+    [self.view addSubview:campFireView];
+    [self.view insertSubview:infoButton aboveSubview:campFireView];
+
+    [campFireView release];
+}
+
+- (void)toggleView
+{
+//    FlipsideView *flipsideView = [[FlipsideView alloc] init];
+//    [view addSubview:flipsideView.view];
+//    [flipsideView release];
 }
 
 /*

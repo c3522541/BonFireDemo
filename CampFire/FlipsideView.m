@@ -20,6 +20,15 @@
     return self;
 }
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
 - (void)dealloc
 {
     [super dealloc];
@@ -35,12 +44,20 @@
 
 #pragma mark - View lifecycle
 
-/*
+
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView
 {
+    UIView *view = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+
+    UIButton *urlButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    urlButton.frame = CGRectMake(20.0f, 200.0f, 280.0f, 30.0f);
+    [urlButton setTitle:@"www.holyflamechurch.com" forState:UIControlStateNormal];
+    [view addSubview:urlButton];
+    self.view = view;
+    [view release];
 }
-*/
+
 
 /*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
