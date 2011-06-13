@@ -23,6 +23,7 @@
 
 - (void)dealloc
 {
+    [infoButton release];
     [navigationBar release];
     [super dealloc];
 }
@@ -46,10 +47,8 @@
     self.view = view;
     [view release];    
     
-    mainViewController = [[MainViewController alloc] init]; 
     flipsideViewController = [[FlipsideViewController alloc] init];
     
-    [self.view addSubview:mainViewController.view];
     
     infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     infoButton.frame = CGRectMake(290.0f, 420.0f, 30.0f, 30.0f);
@@ -58,14 +57,13 @@
 	navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 44.0)];
 	navigationBar.barStyle = UIBarStyleBlackOpaque;
 
-	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(toggleView2)];
+	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(toggleView)];
     UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"Bonfire"];
 	navigationItem.rightBarButtonItem = buttonItem;
 	[navigationBar pushNavigationItem:navigationItem animated:NO];
     [navigationItem release];
     [buttonItem release];
     
-    [self.view insertSubview:infoButton aboveSubview:mainViewController.view];
     
     //
 //#if 1   
@@ -87,26 +85,36 @@
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
 	
-    
-	[flipsideViewController viewWillAppear:YES];
-	[mainViewController viewWillDisappear:YES];
-	[mainViewController.view removeFromSuperview];
-    [infoButton removeFromSuperview];
-    [self.view addSubview:flipsideViewController.view];
-	[self.view insertSubview:navigationBar aboveSubview:flipsideViewController.view];
-	[mainViewController viewDidDisappear:YES];
-	[flipsideViewController viewDidAppear:YES];
+    if ([mainViewController.view superview] != nil) {
+        [flipsideViewController viewWillAppear:YES];
+        [mainViewController viewWillDisappear:YES];
+        [mainViewController.view removeFromSuperview];
+        [infoButton removeFromSuperview];
+        [self.view addSubview:flipsideViewController.view];
+        [self.view insertSubview:navigationBar aboveSubview:flipsideViewController.view];
+        [mainViewController viewDidDisappear:YES];
+        [flipsideViewController viewDidAppear:YES];        
+    }   else {
+        [mainViewController viewWillAppear:YES];
+        [flipsideViewController viewWillDisappear:YES];
+        [flipsideViewController.view removeFromSuperview];
+        [navigationBar removeFromSuperview];
+        [self.view addSubview:mainViewController.view];
+        [self.view insertSubview:infoButton aboveSubview:mainViewController.view];
+        [flipsideViewController viewDidDisappear:YES];
+        [mainViewController viewDidAppear:YES];        
+    }
         
 	[UIView commitAnimations];
 }
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+    mainViewController = [[MainViewController alloc] init]; 
+    [self.view addSubview:mainViewController.view];
+    [self.view insertSubview:infoButton aboveSubview:mainViewController.view];
 }
-*/
 
 - (void)viewDidUnload
 {
