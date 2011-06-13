@@ -8,17 +8,8 @@
 
 #import "CampFireAppViewController.h"
 #import "FlipsideViewController.h"
-
+#import "MainViewController.h"
 @implementation CampFireAppViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (id)init
 {
@@ -32,6 +23,7 @@
 
 - (void)dealloc
 {
+    [navigationBar release];
     [super dealloc];
 }
 
@@ -54,59 +46,58 @@
     self.view = view;
     [view release];    
     
-    // create the view that will execute our animation
-    campFireView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    mainViewController = [[MainViewController alloc] init]; 
+    flipsideViewController = [[FlipsideViewController alloc] init];
     
-    // load all the frames of our animation
-    campFireView.animationImages = [NSArray arrayWithObjects:   
-                                    [UIImage imageNamed:@"campFire01.gif"],
-                                    [UIImage imageNamed:@"campFire02.gif"],
-                                    [UIImage imageNamed:@"campFire03.gif"],
-                                    [UIImage imageNamed:@"campFire04.gif"],
-                                    [UIImage imageNamed:@"campFire05.gif"],
-                                    [UIImage imageNamed:@"campFire06.gif"],
-                                    [UIImage imageNamed:@"campFire07.gif"],
-                                    [UIImage imageNamed:@"campFire08.gif"],
-                                    [UIImage imageNamed:@"campFire09.gif"],
-                                    [UIImage imageNamed:@"campFire10.gif"],
-                                    [UIImage imageNamed:@"campFire11.gif"],
-                                    [UIImage imageNamed:@"campFire12.gif"],
-                                    [UIImage imageNamed:@"campFire13.gif"],
-                                    [UIImage imageNamed:@"campFire14.gif"],
-                                    [UIImage imageNamed:@"campFire15.gif"],
-                                    [UIImage imageNamed:@"campFire16.gif"],
-                                    [UIImage imageNamed:@"campFire17.gif"], nil];
-    
-    campFireView.animationDuration = 1.5;
-    campFireView.animationRepeatCount = 0;
-    [campFireView startAnimating];
+    [self.view addSubview:mainViewController.view];
     
     infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     infoButton.frame = CGRectMake(290.0f, 420.0f, 30.0f, 30.0f);
     [infoButton addTarget:self action:@selector(toggleView) forControlEvents:UIControlEventTouchUpInside];
 
-#if 1   
-    [self.view addSubview:campFireView];
-    [self.view insertSubview:infoButton aboveSubview:campFireView];
-#else
-    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
-    [view addSubview:flipsideViewController.view];
-#endif
-    [campFireView release];
+	navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0, 0.0, 320.0, 44.0)];
+	navigationBar.barStyle = UIBarStyleBlackOpaque;
+
+	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(toggleView2)];
+    UINavigationItem *navigationItem = [[UINavigationItem alloc] initWithTitle:@"Bonfire"];
+	navigationItem.rightBarButtonItem = buttonItem;
+	[navigationBar pushNavigationItem:navigationItem animated:NO];
+    [navigationItem release];
+    [buttonItem release];
+    
+    [self.view insertSubview:infoButton aboveSubview:mainViewController.view];
+    
+    //
+//#if 1   
+//    [self.view addSubview:campFireView];
+//    [self.view insertSubview:infoButton aboveSubview:campFireView];
+//#else
+//    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
+//    [view addSubview:flipsideViewController.view];
+//#endif
 }
 
+- (void)toggleView2
+{
+    
+}
 - (void)toggleView
 {
 	[UIView beginAnimations:nil context:NULL];
 	[UIView setAnimationDuration:1];
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
-    [campFireView removeFromSuperview];
+	
+    
+	[flipsideViewController viewWillAppear:YES];
+	[mainViewController viewWillDisappear:YES];
+	[mainViewController.view removeFromSuperview];
     [infoButton removeFromSuperview];
-    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
-    [view addSubview:flipsideViewController.view];
-    [UIView commitAnimations];
-
-//    [FlipsideViewController release];
+    [self.view addSubview:flipsideViewController.view];
+	[self.view insertSubview:navigationBar aboveSubview:flipsideViewController.view];
+	[mainViewController viewDidDisappear:YES];
+	[flipsideViewController viewDidAppear:YES];
+        
+	[UIView commitAnimations];
 }
 
 /*
