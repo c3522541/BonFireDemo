@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "CampFireAppViewController.h"
 @interface CampFireAppDelegate : NSObject <UIApplicationDelegate> {
-
+    CampFireAppViewController *viewController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -7,7 +7,7 @@
 //
 
 #import "CampFireAppViewController.h"
-#import "FlipsideView.h"
+#import "FlipsideViewController.h"
 
 @implementation CampFireAppViewController
 
@@ -55,7 +55,7 @@
     [view release];    
     
     // create the view that will execute our animation
-    UIImageView* campFireView = [[UIImageView alloc] initWithFrame:self.view.frame];
+    campFireView = [[UIImageView alloc] initWithFrame:self.view.frame];
     
     // load all the frames of our animation
     campFireView.animationImages = [NSArray arrayWithObjects:   
@@ -84,18 +84,29 @@
     infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
     infoButton.frame = CGRectMake(290.0f, 420.0f, 30.0f, 30.0f);
     [infoButton addTarget:self action:@selector(toggleView) forControlEvents:UIControlEventTouchUpInside];
-    
+
+#if 1   
     [self.view addSubview:campFireView];
     [self.view insertSubview:infoButton aboveSubview:campFireView];
-
+#else
+    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
+    [view addSubview:flipsideViewController.view];
+#endif
     [campFireView release];
 }
 
 - (void)toggleView
 {
-//    FlipsideView *flipsideView = [[FlipsideView alloc] init];
-//    [view addSubview:flipsideView.view];
-//    [flipsideView release];
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:1];
+	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+    [campFireView removeFromSuperview];
+    [infoButton removeFromSuperview];
+    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
+    [view addSubview:flipsideViewController.view];
+    [UIView commitAnimations];
+
+//    [FlipsideViewController release];
 }
 
 /*

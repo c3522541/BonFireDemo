@@ -12,6 +12,7 @@
 @interface CampFireAppViewController : UIViewController {
     UIButton *infoButton;
     UIView *view;
+    UIImageView* campFireView;
 }
 
 - (void)toggleView;

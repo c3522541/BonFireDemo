@@ -1,24 +1,24 @@
 //
-//  FlipsideView.m
+//  FlipsideViewControllerController.m
 //  CampFire
 //
 //  Created by Sean Che on 11-06-10.
 //  Copyright 2011 n/a. All rights reserved.
 //
 
-#import "FlipsideView.h"
+#import "FlipsideViewController.h"
 
 
-@implementation FlipsideView
+@implementation FlipsideViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
 
 - (id)init
 {

@@ -16,11 +16,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    CampFireAppViewController *viewController = [[CampFireAppViewController alloc] init];
+    viewController = [[CampFireAppViewController alloc] init];
     [self.window addSubview:viewController.view];
     // Override point for customization after application launch.
     [self.window makeKeyAndVisible];
-    [viewController release];
     return YES;
 }
 
@@ -65,6 +64,7 @@
 
 - (void)dealloc
 {
+    [viewController release];
     [_window release];
     [super dealloc];
 }

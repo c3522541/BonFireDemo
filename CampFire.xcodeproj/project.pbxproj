@@ -33,7 +33,8 @@
 		996BB36E13A1CCF800057743 /* campFire15.gif in Resources */ = {isa = PBXBuildFile; fileRef = 996BB35C13A1CCF800057743 /* campFire15.gif */; };
 		996BB36F13A1CCF800057743 /* campFire16.gif in Resources */ = {isa = PBXBuildFile; fileRef = 996BB35D13A1CCF800057743 /* campFire16.gif */; };
 		996BB37013A1CCF800057743 /* campFire17.gif in Resources */ = {isa = PBXBuildFile; fileRef = 996BB35E13A1CCF800057743 /* campFire17.gif */; };
-		99A5C38B13A31453008514A0 /* FlipsideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A5C38A13A31453008514A0 /* FlipsideView.m */; };
+		999A092013A6895900BA5FAC /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 999A091F13A6895900BA5FAC /* MainViewController.m */; };
+		99A5C38B13A31453008514A0 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99A5C38A13A31453008514A0 /* FlipsideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,8 +69,10 @@
 		996BB35C13A1CCF800057743 /* campFire15.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire15.gif; sourceTree = "<group>"; };
 		996BB35D13A1CCF800057743 /* campFire16.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire16.gif; sourceTree = "<group>"; };
 		996BB35E13A1CCF800057743 /* campFire17.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = campFire17.gif; sourceTree = "<group>"; };
-		99A5C38913A31453008514A0 /* FlipsideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideView.h; sourceTree = "<group>"; };
-		99A5C38A13A31453008514A0 /* FlipsideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideView.m; sourceTree = "<group>"; };
+		999A091E13A6895800BA5FAC /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		999A091F13A6895900BA5FAC /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		99A5C38913A31453008514A0 /* FlipsideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		99A5C38A13A31453008514A0 /* FlipsideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,12 +122,14 @@
 			children = (
 				996BB34913A1C50200057743 /* CampFireAppViewController.h */,
 				996BB34A13A1C50200057743 /* CampFireAppViewController.m */,
-				99A5C38913A31453008514A0 /* FlipsideView.h */,
-				99A5C38A13A31453008514A0 /* FlipsideView.m */,
+				99A5C38913A31453008514A0 /* FlipsideViewController.h */,
+				99A5C38A13A31453008514A0 /* FlipsideViewController.m */,
 				996BB33E13A1C3D400057743 /* CampFireAppDelegate.h */,
 				996BB33F13A1C3D400057743 /* CampFireAppDelegate.m */,
 				996BB34113A1C3D400057743 /* MainWindow.xib */,
 				996BB33613A1C3D400057743 /* Supporting Files */,
+				999A091E13A6895800BA5FAC /* MainViewController.h */,
+				999A091F13A6895900BA5FAC /* MainViewController.m */,
 			);
 			path = CampFire;
 			sourceTree = "<group>";
@@ -248,7 +253,8 @@
 				996BB33D13A1C3D400057743 /* main.m in Sources */,
 				996BB34013A1C3D400057743 /* CampFireAppDelegate.m in Sources */,
 				996BB34B13A1C50200057743 /* CampFireAppViewController.m in Sources */,
-				99A5C38B13A31453008514A0 /* FlipsideView.m in Sources */,
+				99A5C38B13A31453008514A0 /* FlipsideViewController.m in Sources */,
+				999A092013A6895900BA5FAC /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

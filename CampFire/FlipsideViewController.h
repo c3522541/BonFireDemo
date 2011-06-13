@@ -1,5 +1,5 @@
 //
-//  FlipsideView.h
+//  FlipsideViewController.h
 //  CampFire
 //
 //  Created by Sean Che on 11-06-10.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FlipsideView : UIViewController {
+@interface FlipsideViewController : UIViewController {
     
 }
 
