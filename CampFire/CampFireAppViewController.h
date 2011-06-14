@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
+#import "FlipsideViewController.h"
+#import "MainViewController.h"
 @interface CampFireAppViewController : UIViewController {
     UIButton *infoButton;
+    UINavigationBar *navigationBar;
     UIView *view;
-    UIImageView* campFireView;
+    FlipsideViewController *flipsideViewController;
+    MainViewController *mainViewController;
 }
 
 - (void)toggleView;

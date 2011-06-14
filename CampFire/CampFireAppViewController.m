@@ -63,22 +63,8 @@
 	[navigationBar pushNavigationItem:navigationItem animated:NO];
     [navigationItem release];
     [buttonItem release];
-    
-    
-    //
-//#if 1   
-//    [self.view addSubview:campFireView];
-//    [self.view insertSubview:infoButton aboveSubview:campFireView];
-//#else
-//    FlipsideViewController *flipsideViewController = [[FlipsideViewController alloc] init];
-//    [view addSubview:flipsideViewController.view];
-//#endif
 }
 
-- (void)toggleView2
-{
-    
-}
 - (void)toggleView
 {
 	[UIView beginAnimations:nil context:NULL];
@@ -86,23 +72,23 @@
 	[UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
 	
     if ([mainViewController.view superview] != nil) {
-        [flipsideViewController viewWillAppear:YES];
-        [mainViewController viewWillDisappear:YES];
+//        [flipsideViewController viewWillAppear:YES];
+//        [mainViewController viewWillDisappear:YES];
         [mainViewController.view removeFromSuperview];
         [infoButton removeFromSuperview];
         [self.view addSubview:flipsideViewController.view];
         [self.view insertSubview:navigationBar aboveSubview:flipsideViewController.view];
-        [mainViewController viewDidDisappear:YES];
-        [flipsideViewController viewDidAppear:YES];        
+//        [mainViewController viewDidDisappear:YES];
+//        [flipsideViewController viewDidAppear:YES];        
     }   else {
-        [mainViewController viewWillAppear:YES];
-        [flipsideViewController viewWillDisappear:YES];
+//        [mainViewController viewWillAppear:YES];
+//        [flipsideViewController viewWillDisappear:YES];
         [flipsideViewController.view removeFromSuperview];
         [navigationBar removeFromSuperview];
         [self.view addSubview:mainViewController.view];
         [self.view insertSubview:infoButton aboveSubview:mainViewController.view];
-        [flipsideViewController viewDidDisappear:YES];
-        [mainViewController viewDidAppear:YES];        
+//        [flipsideViewController viewDidDisappear:YES];
+//        [mainViewController viewDidAppear:YES];        
     }
         
 	[UIView commitAnimations];

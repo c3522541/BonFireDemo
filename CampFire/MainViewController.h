@@ -10,6 +10,7 @@
 
 
 @interface MainViewController : UIViewController {
+    UIImageView* campFireView;
     
 }
 
