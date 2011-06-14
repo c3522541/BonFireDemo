@@ -11,6 +11,8 @@
 #import "MainViewController.h"
 @implementation CampFireAppViewController
 
+@synthesize infoButton;
+
 - (id)init
 {
     self = [super init];
@@ -50,7 +52,7 @@
     flipsideViewController = [[FlipsideViewController alloc] init];
     
     
-    infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    infoButton = [[UIButton buttonWithType:UIButtonTypeInfoLight] retain];
     infoButton.frame = CGRectMake(290.0f, 420.0f, 30.0f, 30.0f);
     [infoButton addTarget:self action:@selector(toggleView) forControlEvents:UIControlEventTouchUpInside];
 

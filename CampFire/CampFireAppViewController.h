@@ -17,5 +17,7 @@
     MainViewController *mainViewController;
 }
 
+@property (nonatomic, assign) UIButton *infoButton;
+
 - (void)toggleView;
 @end
